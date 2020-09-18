@@ -1,0 +1,117 @@
+
+Git : version control system digunakan developer untuk mengembangkan software secara bersama-sama.
+Perintah pada git :
+
+1. Git config: mengatur konfigurasi tertentu sesuai keinginan(email, algoritma untuk diff, username, format file, dll).
+   Ex. mengatur email 
+		git config --global user.email email@gmail.com
+	  
+2. Git init : membuat repositori baru.
+		git init
+	
+3. Git add : menambahkan file ke index dari direktori lokal
+		git add *
+		
+4. Git clone : untuk checkout repositori. 
+	EX. Jika repositori berada di remove server
+			git clone email@93.188.160.58:/path/to/repository
+		
+		Jika salinan repositori lokal ingin dibuat
+			git clone /path/to/repository
+		
+5. Git commit : melakukan commit pada perubahan ke head. Ingat bahwa perubahan apapun yang di-commit tidak akan langsung ke remote repository.
+		git commit –m "keterangan"
+		
+6. Git status : menampilkan daftar file yang berubah bersama dengan file yang ingin di tambahkan atau di-commit.
+		git status
+		
+7. Git push : mengirimkan perubahan ke master branch dari remote repository yang berhubungan dengan direktori kerja.
+		git push origin master
+		
+8. Git checkout : membuat branch atau untuk berpindah diantaranya. 
+	Ex. Perintah berikut ini akan membuat branch baru dan berpindah ke dalamnya.
+			command git checkout -b <nama-branch>
+		
+		Untuk berpindah dari branch satu ke lainnya.
+			git checkout <branch-name>
+			
+9. Git remote : membuat user terhubung ke remote repository.
+	Ex. Perintah berikut ini akan menampilkan repository yang sedang dikonfigurasi.
+			git remote -v
+			
+		Perintah ini membuat user bisa menghubungkan repository lokal ke remote server.
+			git remote add origin <93.188.160.58>
+			
+10. Git branch :  untuk me-list, membuat atau menghapus branch. 
+	Ex. Untuk menampilkan semua branch yang ada di repository.
+			git branch
+			
+		Untuk menghapus branch	
+			git branch -d <branch-name>
+			
+11. Git pull : menggabungkan semua perubahan yang ada di remote repository ke direktori lokal.
+		git pull
+		
+12. Git merge : menggabungkan sebuah branch ke branch aktif.
+		git merge <nama-branch>
+	
+13. Git diff : menampilkan conflicts. 
+		Ex. Untuk melihat conflicts dengan file dasar.
+			git diff --base <nama-file>
+			
+			Menampilkan conflicts diantara branch yang akan di-merge.
+			git diff <source-branch> <target-branch>
+			
+			Untuk menampilkan semua conflict yang ada.
+			git diff
+			
+14. Git tag : menandai commits tertentu.	
+		git tag 1.1.0 <insert-commitID-here>
+		
+15. Git log : menampilkan daftar commits yang ada di branch beserta detail-nya.	
+
+16. Git reset : me-reset index dan bekerja dengan kondisi commit paling baru.
+		git reset --hard HEAD
+		
+17. Git rm : menghapus file dari index dan direktori kerja.
+		git rm filename.txt
+		
+18. Git stash : membantu menyimpan perubahan yang tidak langsung di-commit, namun hanya sementara.
+		git stash
+		
+19. Git show :  menampilkan informasi tentang object pada git, gunakan git show.
+		git show
+		
+20. Git fetch : menampilkan semua object dari remote repository yang tidak berada di direktori kerja lokal.
+		git fetch origin
+		
+21. Git Is-tree : menampilkan susunan object berdasarkan nama dan mode setiap item, dan nilai blob SHA-1, gunakan perintah git ls-tree.
+		git ls-tree HEAD
+		
+22. Git cat-file : Menggunakan nilai SHA-1, menampilkan tipe object dengan menggunakan perintah git cat-file.
+		git cat-file –p d670460b4b4aece5915caf5c68d12f560a9fe3e4
+		
+23. Git prep : mengizinkan pengguna mencari frase dan/atau kata yang berada di dalam direktori.
+		Ex. untuk mencari www.hostinger.co.id di dalam semua file
+			git grep "www.hostinger.co.id"
+			
+24. Gitk : ampilan grafis dari repository lokal yang bisa dipanggil.
+		gitk
+		
+25. Git instaweb : web server bisa dijalan berdampingan dengan repository lokal. Nantinya web browser akan langsung diarahkan ke server tersebut.
+		git instaweb –httpd=webrick
+		
+26. Git gc : mengoptimasi repository melalui garbage collection, yang akan membersihkan file yang tidak dibutuhkan dan mengoptimasinya.
+		git gc
+		
+27. Git archive : memungkinkan user membuat file zip atau tar yang mengandung susunan repository.
+		git archive --format=tar master
+		
+28. Git prune : object yang tidak memiliki incoming pointers akan dihapus.
+		git prune
+		
+29. Git fsck : membuat pengecekan keseluruhan dari file system git, Object yang corrupt akan dikenali.
+		git fsck
+		
+30. Git rebase : menerapkan ulang commit di branch yang lain.
+		git rebase master
