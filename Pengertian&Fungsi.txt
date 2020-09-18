@@ -3,7 +3,7 @@ Git : version control system digunakan developer untuk mengembangkan software se
 Perintah pada git :
 
 1. Git config: mengatur konfigurasi tertentu sesuai keinginan(email, algoritma untuk diff, username, format file, dll).
-   Ex. mengatur email 
+   Ex. mengatur email..
 		git config --global user.email email@gmail.com
 	  
 2. Git init : membuat repositori baru.
